@@ -12,10 +12,10 @@
   batch_size = 2
 
   # Image side size in pixels.
-  image_size = 512
+  image_size = 256
 
   # Directory where to save checkpoints to during training.
-  checkpoint = '/tmp/pth/'
+  checkpoint = '/app/container_mount/checkpoints/'
 
 
 # Model specific optimization parameters.

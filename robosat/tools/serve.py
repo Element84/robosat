@@ -51,7 +51,7 @@ def index():
 def tile(z, x, y):
 
     # Todo: predictor should take care of zoom levels
-    if z != 18:
+    if z != DESIRED_ZOOM_LEVEL:
         abort(404)
 
     tile = mercantile.Tile(x, y, z)

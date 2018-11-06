@@ -45,20 +45,20 @@ mapboxgl.accessToken = '{{ token }}';
 
 var beforeMap = new mapboxgl.Map({
   container: 'before',
-  center: [-84.37, 33.75],
-  zoom: 18,
+  center: [-6.5869302, 39.1309271],
+  zoom: DESIRED_ZOOM_LEVEL,
   minZoom: 5,
-  maxZoom: 20,
+  maxZoom: DESIRED_ZOOM_LEVEL,
   hash: true,
   style: 'mapbox://styles/mapbox/satellite-v9'
 });
 
 var afterMap = new mapboxgl.Map({
   container: 'after',
-  center: [-84.37, 33.75],
-  zoom: 18,
+  center: [-6.5869302, 39.1309271],
+  zoom: DESIRED_ZOOM_LEVEL,
   minZoom: 5,
-  maxZoom: 20,
+  maxZoom: DESIRED_ZOOM_LEVEL,
   hash: true,
   style: 'mapbox://styles/mapbox/satellite-v9'
 });
@@ -71,7 +71,7 @@ afterMap.on('load', function() {
     'type': 'raster',
     'source': {
       'type': 'raster',
-      'tiles': [ 'http://127.0.0.1:5000/{z}/{x}/{y}.png' ],
+      'tiles': [ 'http://PUBLIC_IP:5000/{z}/{x}/{y}.png' ],
       'tileSize': {{ size }}
     }
   });
